@@ -1,0 +1,187 @@
+/* null margins and padding to give good cross-browser baseline */
+html,body,address,blockquote,div,
+form,fieldset,caption,
+h1,h2,h3,h4,h5,h6,
+hr,ul,li,ol,ul,
+table,tr,td,th,p,img {
+	margin:0;
+	padding:0;
+}
+
+img,fieldset {
+	border:none;
+}
+
+hr {
+	display:none;
+	/*
+		HR in my code are for semantic breaks in topic/section, NOT
+		style/presenation, so hide them from screen.css users
+	*/
+}
+
+@media (max-width:480px) {
+	* {
+		-webkit-text-size-adjust:none;
+		-ms-text-size-adjust:none;
+	}
+}
+
+body {
+	padding:16px 0;
+	font:normal 85%/150% arial,helvetica,sans-serif;
+	background:#DEF;
+}
+
+a {
+	color:#48C;
+}
+
+a:visited {
+	color:#246;
+}
+
+a:active,
+a:focus,
+a:hover {
+	color:#08F;
+	text-shadow:0 0 4px #DEF;
+}
+
+#pageWrapper {
+	min-width:50em;
+	max-width:68em;
+	width:95%;
+	margin:0 auto;
+	background:#FFF;
+	border:2px solid #000;
+	-webkit-border-radius:16px;
+	border-radius:16px;
+	-webkit-box-shadow:
+		0 0 128px #FFF,
+		0 0 16px 4px #FFF;
+	box-shadow:
+		0 0 128px #FFF,
+		0 0 16px 4px #FFF;
+}
+
+#pageWrapper h1 {
+	font:bold 200%/120% arial,helvetica,sans-serif;
+	padding:0.5em;
+	text-align:center;
+	color:#FFF;
+	background:#48C;
+	border-bottom:2px solid #000;
+	-webkit-border-radius:14px 14px 0 0;
+	border-radius:14px 14px 0 0;
+	text-shadow:0 0 1em #8CF;
+}
+
+#pageWrapper h2 {
+	font:bold 150%/120% arial,helvetica,sans-serif;
+	padding:0.66em 0 0.33em;
+	margin:0 0.66em 0.33em;
+	border-bottom:2px solid #008;
+}
+
+#pageWrapper h3 {
+	font:bold 125%/120% arial,helvetica,sans-serif;
+	padding:0.8em 0.8em 0.33em;
+	color:#048;
+}
+
+#pageWrapper p {
+	padding:0 1em 1em;
+}
+
+#pageWrapper ul {
+	padding:0 1em 0.5em 2em;
+}
+
+#pageWrapper li {
+	padding-bottom:0.5em;
+}
+
+#pageWrapper pre {
+	margin:0 1em 1em;
+	padding:0.5em;
+	font:normal 100%/140% consolas,courier,monospace;
+	background:#F0F8FF;
+	border:1px solid #ACE;
+	border-radius:0.5em;
+}
+
+var,
+samp,
+code {
+	font:bold 100%/140% consolas,courier,monospace;
+	color:#080;
+}
+
+samp {
+	color:#00F;
+}
+
+code {
+	color:#800;
+}
+
+pre code,
+pre samp,
+pre var {
+	font-weight:normal;
+	color:#000;
+}
+
+pre:target,
+p:target {
+	background:#FFD;
+}
+
+#footer {
+	overflow:hidden; /* wrap floats */
+	zoom:1; /* trip haslayout, wrap floats IE */
+	text-align:right;
+	padding:1em;
+	background:#48C;
+	color:#FFF;
+	border-top:2px solid #000;
+	border-radius:0 0 14px 14px;
+}
+
+#footer a {
+	color:#FFF;
+}
+
+#footer a:visited {
+	color:#BDF;
+}
+
+#footer ul {
+	float:left;
+	list-style:none;
+	padding:0;
+}
+
+#footer li {
+	display:inline;
+}
+
+#footer li a {
+	display:inline-block;
+}
+
+/* IE7/earlier don't know generated content */
+*:first-child+html #footer li a,
+* html #footer li a {
+	padding-right:0.75em;
+}
+
+#footer li:before {
+	content:'\2022';
+	text-decoration:none;
+}
+
+#footer li:first-child:before {
+	content:'';
+}
